@@ -12,14 +12,12 @@ Gem::Specification.new do |spec|
   spec.description   = "A session store and a cache store backed by Aerospike for Rails"
   spec.homepage      = "https://github.com/Stajor/aerospike-rails"
   spec.license       = "Apache2.0"
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.files         = Dir.glob("lib/**/*") + %w(LICENSE.txt README.md)
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_runtime_dependency "aerospike", "~> 2.1"
-  spec.add_runtime_dependency "activesupport", "~> 4"
-  spec.add_runtime_dependency "actionpack", "~> 4"
+  spec.add_runtime_dependency "activesupport", ">= 4"
+  spec.add_runtime_dependency "actionpack", ">= 4"
 end

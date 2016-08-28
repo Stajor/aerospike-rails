@@ -51,7 +51,7 @@ Or send in a custom client instance:
 
 ```ruby
 YourAppName::Application.config.session_store :aerospike_store,
-		:client => Aerospike::Client.new("127.0.0.1", 3000)
+		:client => Aerospike::Client.new("127.0.0.1")
 ```
 
 Supported data types are:
@@ -96,7 +96,7 @@ Or send in a custom client instance:
 
 ```ruby
 config.cache_store = :aerospike_store,
-		:client => Aerospike::Client.new("127.0.0.1", 3000)
+		:client => Aerospike::Client.new("127.0.0.1")
 ```
 
 #### Supported options

@@ -7,21 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "aerospike-rails"
   spec.version       = Aerospike::Rails::VERSION
   spec.authors       = ["Alex Belenky"]
-  spec.email         = ["alex.b@matomy.com"]
-
-  spec.summary       = 'sd'
-  spec.description   = 'as'
-  spec.homepage      = "http://github.com"
-  spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "http://mygemserver.com"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
-
+  spec.email         = ["bagirs@gmail.com"]
+  spec.summary       = "Aerospike Session and Cache stores for Ruby on Rails"
+  spec.description   = "A session store and a cache store backed by Aerospike for Rails"
+  spec.homepage      = "https://github.com/Stajor/aerospike-rails"
+  spec.license       = "Apache2.0"
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
